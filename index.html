@@ -1,4 +1,4 @@
-updatedIndex.html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +10,7 @@ updatedIndex.html
       background-color: #000000; /* default black */
       text-align: center;
       padding: 50px;
-      transition: background-color 0.6s ease; 
+      transition: background-color 0.9s ease; /* smooth transition */
     }
     h1 {
       font-size: 3em;
@@ -59,29 +59,30 @@ updatedIndex.html
   <br>
 
   <button onclick="sayHello()">Click Me</button>
-  <button id="bgBtn" onclick="toggleBackground()">Change Background</button>
+  <button onclick="randomBackground()">Random Background</button>
 
   <script>
     function sayHello() {
       alert("👋 Hi, I’m Guru! Thanks for checking out my first website 🚀");
     }
 
-
-    let isDefault = true;  
-    function toggleBackground() {
-      const body = document.body;
-      const button = document.getElementById("bgBtn");
-
-      if (isDefault) {
-        body.style.backgroundColor = "#1e90ff"; // favorite color (blue)
-        button.innerText = "Reset Background";
-      } else {
-        body.style.backgroundColor = "#000000"; // back to default
-        button.innerText = "Change Background";
+    // Function to generate a random hex color
+    function getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
       }
-      isDefault = !isDefault; 
+      return color;
+    }
+
+    // Change background to a random color
+    function randomBackground() {
+      const newColor = getRandomColor();
+      document.body.style.backgroundColor = newColor;
     }
   </script>
 
 </body>
+</html>
 </html>
