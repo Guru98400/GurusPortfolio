@@ -11,6 +11,7 @@
       padding: 50px;
       transition: background-color 0.9s ease; /* smooth transition */
     }
+
     h1 {
       font-size: 3em;
       color: #ffffff;
@@ -39,8 +40,54 @@
       transition: background 0.3s ease, transform 0.2s ease;
     }
     button:hover {
-      background-color: #00fd3f;
+      background-color: #fd2c2c;
       transform: scale(1.05);
+    }
+    .fun-facts-me {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 20px;
+      background: rgb(255, 255, 255);
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 5 5 15px rgb(255, 68, 68);
+    }
+    .fun-facts-me h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #7e0202, #e91616);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .fun-facts-me li {
+      background: rgba(0, 0, 0, 0.6);
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      color: white;
+    }
+    .fun-facts-me li:hover {
+      background: linear-gradient(90deg, #fa2c2c, #580202);
+      color: black;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .fun-facts-me {
+        padding: 15px;
+      }
+      .fun-facts-me h2 {
+        font-size: 1.5rem;
+      }
+      .fun-facts-me li {
+        font-size: 1rem;
+        padding: 12px;
+      }
     }
   </style>
 </head>
@@ -54,6 +101,17 @@
   </p>
 
   <img src="fbbefuld1lo31.jpg" alt="Favorite Cartoon">
+
+  <br>
+
+ <section class="fun-facts-me">
+    <h2>Fun Facts About Me</h2>
+    <ol type="1">
+      <li>I am a fitness content creator named Madmans_spirit</li>
+      <li>Iam a NCC (national-cadet-corp)</li>
+      <li>I enjoy experimenting with new tech and building side projects.</li>
+    </ol>
+  </section>
 
   <br>
 
@@ -75,7 +133,7 @@
       return color;
     }
 
-    // Change background to a random color
+    // Change background 
     function randomBackground() {
       const newColor = getRandomColor();
       document.body.style.backgroundColor = newColor;
@@ -84,3 +142,4 @@
 
 </body>
 </html>
+
